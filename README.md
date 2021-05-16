@@ -4,10 +4,10 @@
 It's a program I wrote to collect data from an online [boardgame store](http://www.swanpanasia.com/) based in Taiwan. 
 
 ## Script Development Process 
-Before actually writing any codes, I'd  outline my plan and do some experiments as below:<br> 
+Before actually writing any code, I'd  outline my plan and do some experiments as below:<br> 
 :one:  Identify the goal: the data I need and their data types for future database<br>
 :two:  Navigate the target website: observe its HTML and URL structure<br>
-:three: Experiment with different methods and time my codes<br>
+:three: Experiment with different methods and time my code<br>
 
 For the script, it can be broken down into two major modules: web scraping and writing into CSV file. 
 
