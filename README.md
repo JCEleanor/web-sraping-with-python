@@ -4,16 +4,16 @@
 It's a program I wrote to collect data from an online [boardgame store](http://www.swanpanasia.com/) based in Taiwan. 
 
 ## Script Development Process 
-Before actually writing any codes, I'd  outline my plan and do some experiments as below: 
-:one:  Identify the goal: the data I need and their data types for future database
-:two:  Navigate the target website: observe its HTML and URL structure
-:three: Experiment with different methods and time my codes 
+Before actually writing any codes, I'd  outline my plan and do some experiments as below:<br> 
+:one:  Identify the goal: the data I need and their data types for future database<br>
+:two:  Navigate the target website: observe its HTML and URL structure<br>
+:three: Experiment with different methods and time my codes<br>
 
 For the script, it can be broken down into two major modules: web scraping and writing into CSV file. 
 
 ### I Web scraping
 
-#### 1. Get all the product names and save it into a list
+#### 1. Loop through every product page and retrieve all the product names and save them into a list
 #### 2. Loop through the list and format them like so:  <small> "http://www.swanpanasia.com/products/{product's_english_name}" </small>
 
 <small>
@@ -24,13 +24,13 @@ A. if it reaches the destination successfully (HTTP response status code returns
 * save its image url
 * save description as a string
 * save prices as integer 
-* save additional info as a string list
+* save additional infomation as a string list
 
 
 B. if it fails to reach the destination (HTTP response status code returns 400 or 404), do the following: 
 
-* Give it a product Id as 0 (and it will be removed later by its id)
-* Print out the product's English name, in order to handle that in the future, but for now I just remove them
+* Give it a product Id as 0 (so it can be tracked by its Id and be removed afterwards)
+* Print out the product's English name, in order to handle the missing data in the future, but for now I just remove them
 
 </small>
 
@@ -64,12 +64,12 @@ B. if it fails to reach the destination (HTTP response status code returns 400 o
 ### II Compile to CSV file
 
 #### 1. Write the first row as header 
-#### 2. To avoid square brackets showing in the cells, an extra function is needed to convert string list into string like so: 
+#### 2. To avoid square brackets in the cells, an extra function is needed to convert string list into string like so: 
 
-Instead of this: 
-![example](demo1.png)
-to be this: 
-![example](demo2.png)
+Instead of this: <br>
+![example](demo1.png)<br>
+to be this: <br>
+![example](demo2.png)<br>
 
 ## Future Improvement
 - Implement generators to be more memory efficient
