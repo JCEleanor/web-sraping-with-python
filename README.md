@@ -17,7 +17,7 @@ For the script, it can be broken down into two major modules: web scraping and w
 #### 2. Loop through the list and format them like so:  <small> "http://www.swanpanasia.com/products/{product's_english_name}" </small>
 
 <small>
-A. if it reaches the destination successfully (HTTP response status code returns 200), do the following: 
+A. if it reaches the destination successfully (HTTP response status codes returns 200), do the following: 
 
 * give it a product Id (as primary key for future database)
 * save product tags as a string list
@@ -27,7 +27,7 @@ A. if it reaches the destination successfully (HTTP response status code returns
 * save additional infomation as a string list
 
 
-B. if it fails to reach the destination (HTTP response status code returns 400 or 404), do the following: 
+B. if it fails to reach the destination (HTTP response status codes returns 400 or 404), do the following: 
 
 * Give it a product Id as 0 (so it can be tracked by its Id and be removed afterwards)
 * Print out the product's English name, in order to handle the missing data in the future, but for now I just remove them
