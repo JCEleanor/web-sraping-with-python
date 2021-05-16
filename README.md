@@ -72,6 +72,6 @@ to be this:
 ![example](demo2.png)
 
 ## Future Improvement
-- Implement generators to speed up performance
+- Implement generators to be more memory efficient
 - Minimize the use of for loops to speed up performance
 
